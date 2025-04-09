@@ -1,0 +1,4 @@
+langchain
+python-dotenv
+requests
+git+https://github.com/picahq/pica-langchain.git

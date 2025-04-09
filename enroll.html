@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Patient Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
+    <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">🏥 Patient Registration</h2>
+
+    <form id="patientForm" class="space-y-5">
+      <div>
+        <label class="block text-gray-700 font-medium mb-1" for="name">Patient Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="John Doe"
+          class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1" for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="john@example.com"
+          class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      <div>
+        <label class="block text-gray-700 font-medium mb-1" for="disability">Disability</label>
+        <input
+          type="text"
+          id="disability"
+          name="disability"
+          required
+          placeholder="e.g., Visual Impairment"
+          class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-xl transition duration-200"
+      >
+        Submit
+      </button>
+    </form>
+
+    <p id="confirmation" class="mt-4 text-green-600 font-semibold hidden text-center">✅ Form submitted!</p>
+  </div>
+
+  <script>
+    document.getElementById("patientForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // You can replace this with actual integration to Pica or backend
+      document.getElementById("confirmation").classList.remove("hidden");
+      setTimeout(() => {
+        document.getElementById("confirmation").classList.add("hidden");
+        e.target.reset();
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
