@@ -1,12 +1,12 @@
 # 🏥 Hospital Enlisting and Welcome Mail Service (Pica-based Integration)
 
-This project initially was an experimental full-stack prototype for hospital user enlistment and automated email services, built using Pica and other modern tools. The application captures user details through a UI and performs the following:
+This project initially was an experimental full-stack prototype for hospital user enlistment and automated email services, built using Pica and other modern tools. I first connected github to Pica in the website and used chat feature to create new branch or commit/PR or sending a mail, after which I used the SDKs to do the same programatically. The application captures user details through a UI and performs the following:
 
 - Stores submitted data into **Google Sheets** via **Pica**.
 - Sends a **welcome email** to the user via pica.
 
 Due to Google blocking third-party email access from Pica, the workflow was revised to integrate **GitHub**, **PostgreSQL**, and **OpenAI** for a more flexible flow.
-
+I have also used javascript to view and streamline flow after looking at examples in the website.
 ---
 
 ## 🧩 Features
@@ -26,7 +26,7 @@ Due to Google blocking third-party email access from Pica, the workflow was revi
 ## ⚙️ Tech Stack
 
 - **Frontend:** (HTML/CSS)
-- **Backend / Automation:** [Pica](https://github.com/picaio) (LangChain-powered agents)
+- **Backend / Automation:** [Pica](LangChain-powered agents)
 - **Database:** PostgreSQL (local instance)
 - **Cloud Services:** Google Sheets, Gmail (initially), GitHub
 - **AI:** OpenAI (for further use cases)
